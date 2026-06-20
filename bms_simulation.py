@@ -195,6 +195,7 @@ st.caption("EKF SOC estimation • SOH tracking • Thermal model • Fault dete
 # ---- Sidebar controls ----
 st.sidebar.header("Simulation Settings")
 cc_current = st.sidebar.slider("Charge CC current (A)", 0.5, 5.0, 2.0, 0.1)
+mode = st.sidebar.selectbox("Mode", ["Discharging", "Charging (CC-CV)", "Idle"])
 cv_voltage = st.sidebar.slider("Charge CV target voltage (V)", 3.8, 4.2, 4.1, 0.01)
 discharge_current = st.sidebar.slider("Discharge current (A)", 0.5, 8.0, 2.0, 0.1)
 t_ambient = st.sidebar.slider("Ambient temperature (°C)", -10, 45, 25)
